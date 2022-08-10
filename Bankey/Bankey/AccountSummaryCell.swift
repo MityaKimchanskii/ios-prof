@@ -88,8 +88,8 @@ extension AccountSummaryCell {
         // balanceAmountLabel
         balanceAmountLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceAmountLabel.textAlignment = .right
-//        balanceAmountLabel.text = "$777,777,777.77"
         balanceAmountLabel.attributedText = makeFormattedBalance(dollars: "XXX,XXX", cents: "XX")
+        balanceAmountLabel.adjustsFontSizeToFitWidth = true
         
         // chevronImageView
         chevronImageView.translatesAutoresizingMaskIntoConstraints = false
