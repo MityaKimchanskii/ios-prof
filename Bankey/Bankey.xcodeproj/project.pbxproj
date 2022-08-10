@@ -85,11 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				3B8EA2BD28A0CCB200D6EA33 /* AppDelegate.swift */,
+				3B8D05AD28A211080012979E /* MainViewController.swift */,
 				3B8EA2D328A0D10200D6EA33 /* Login */,
 				3B8BFDDE28A18BB600413F08 /* Onboarding */,
 				3B8BFDE528A1D3F700413F08 /* Utils */,
 				3B8EA2D228A0D0C700D6EA33 /* Files */,
-				3B8D05AD28A211080012979E /* MainViewController.swift */,
 			);
 			path = Bankey;
 			sourceTree = "<group>";
