@@ -27,6 +27,7 @@
 		3B8EA2C728A0CCB500D6EA33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8EA2C628A0CCB500D6EA33 /* Assets.xcassets */; };
 		3B8EA2CA28A0CCB500D6EA33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8EA2C828A0CCB500D6EA33 /* LaunchScreen.storyboard */; };
 		3B8EA2D528A0D12600D6EA33 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8EA2D428A0D12600D6EA33 /* LoginView.swift */; };
+		3B8FB78128A4C34E00F231D1 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FB78028A4C34E00F231D1 /* ShakeyBellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3B8EA2C928A0CCB500D6EA33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B8EA2CB28A0CCB500D6EA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B8EA2D428A0D12600D6EA33 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3B8FB78028A4C34E00F231D1 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				3B8BFDDE28A18BB600413F08 /* Onboarding */,
 				3B8D05AF28A22AA20012979E /* AccountSummary */,
 				3B8BFDE528A1D3F700413F08 /* Utils */,
+				3B8FB77F28A4C31E00F231D1 /* Components */,
 				3B8EA2D228A0D0C700D6EA33 /* Files */,
 			);
 			path = Bankey;
@@ -190,6 +193,14 @@
 				3B8BFDE328A1C23000413F08 /* DummyViewController.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		3B8FB77F28A4C31E00F231D1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3B8FB78028A4C34E00F231D1 /* ShakeyBellView.swift */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 				3B8BFDE428A1C23000413F08 /* DummyViewController.swift in Sources */,
 				3B8C4F9C28A391AC00B7853E /* NSNotificationName.swift in Sources */,
 				3B8EA2C228A0CCB200D6EA33 /* LoginViewController.swift in Sources */,
+				3B8FB78128A4C34E00F231D1 /* ShakeyBellView.swift in Sources */,
 				3B8D05B928A23DF50012979E /* AccountSummaryCell.swift in Sources */,
 				3B8BFDE228A19D6600413F08 /* OnboardingViewController.swift in Sources */,
 				3B8D05AE28A211080012979E /* MainViewController.swift in Sources */,
