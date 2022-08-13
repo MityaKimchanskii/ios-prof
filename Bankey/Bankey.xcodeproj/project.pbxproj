@@ -32,6 +32,8 @@
 		3B8FB78528A4D96000F231D1 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FB78428A4D96000F231D1 /* AccountSummaryViewController+Networking.swift */; };
 		3B8FB78928A4ECE100F231D1 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FB78828A4ECE100F231D1 /* ProfileTests.swift */; };
 		3B8FB78B28A4EE4D00F231D1 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FB78A28A4EE4D00F231D1 /* AccountTests.swift */; };
+		3BB81BA328A82685000E86D9 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB81BA228A82685000E86D9 /* SkeletonLoadable.swift */; };
+		3BB81BA528A829E7000E86D9 /* SceletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB81BA428A829E7000E86D9 /* SceletonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		3B8FB78428A4D96000F231D1 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		3B8FB78828A4ECE100F231D1 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		3B8FB78A28A4EE4D00F231D1 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		3BB81BA228A82685000E86D9 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		3BB81BA428A829E7000E86D9 /* SceletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceletonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				3B8D05B828A23DF50012979E /* AccountSummaryCell.swift */,
+				3BB81BA228A82685000E86D9 /* SkeletonLoadable.swift */,
+				3BB81BA428A829E7000E86D9 /* SceletonCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -361,6 +367,8 @@
 				3B8D05B128A22ACA0012979E /* AccountSummaryViewController.swift in Sources */,
 				3B8EA2BE28A0CCB200D6EA33 /* AppDelegate.swift in Sources */,
 				3B8BFDE028A18C0F00413F08 /* OnboardingContainerViewController.swift in Sources */,
+				3BB81BA328A82685000E86D9 /* SkeletonLoadable.swift in Sources */,
+				3BB81BA528A829E7000E86D9 /* SceletonCell.swift in Sources */,
 				3B8FB78528A4D96000F231D1 /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
