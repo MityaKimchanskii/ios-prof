@@ -32,6 +32,8 @@
 		3B8FB78528A4D96000F231D1 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FB78428A4D96000F231D1 /* AccountSummaryViewController+Networking.swift */; };
 		3B8FB78928A4ECE100F231D1 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FB78828A4ECE100F231D1 /* ProfileTests.swift */; };
 		3B8FB78B28A4EE4D00F231D1 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FB78A28A4EE4D00F231D1 /* AccountTests.swift */; };
+		3BB81B5A28AACC9900951913 /* ProfileManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB81B5928AACC9900951913 /* ProfileManageable.swift */; };
+		3BB81B5C28AACF5E00951913 /* AccountSummeryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB81B5B28AACF5E00951913 /* AccountSummeryViewControllerTests.swift */; };
 		3BB81BA328A82685000E86D9 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB81BA228A82685000E86D9 /* SkeletonLoadable.swift */; };
 		3BB81BA528A829E7000E86D9 /* SceletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB81BA428A829E7000E86D9 /* SceletonCell.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,8 @@
 		3B8FB78428A4D96000F231D1 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		3B8FB78828A4ECE100F231D1 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		3B8FB78A28A4EE4D00F231D1 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		3BB81B5928AACC9900951913 /* ProfileManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManageable.swift; sourceTree = "<group>"; };
+		3BB81B5B28AACF5E00951913 /* AccountSummeryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummeryViewControllerTests.swift; sourceTree = "<group>"; };
 		3BB81BA228A82685000E86D9 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		3BB81BA428A829E7000E86D9 /* SceletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceletonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,7 @@
 				3B8FB78428A4D96000F231D1 /* AccountSummaryViewController+Networking.swift */,
 				3B8D05B628A23DA90012979E /* Header */,
 				3B8D05B728A23DC70012979E /* Cells */,
+				3BB81B5828AACC6500951913 /* Networking */,
 			);
 			name = AccountSummary;
 			sourceTree = "<group>";
@@ -233,8 +238,17 @@
 			children = (
 				3B8FB78828A4ECE100F231D1 /* ProfileTests.swift */,
 				3B8FB78A28A4EE4D00F231D1 /* AccountTests.swift */,
+				3BB81B5B28AACF5E00951913 /* AccountSummeryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		3BB81B5828AACC6500951913 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3BB81B5928AACC9900951913 /* ProfileManageable.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +356,7 @@
 				3B8C4F9828A37FDD00B7853E /* CurrencyFormatterTests.swift in Sources */,
 				3B8FB78B28A4EE4D00F231D1 /* AccountTests.swift in Sources */,
 				3B8FB78928A4ECE100F231D1 /* ProfileTests.swift in Sources */,
+				3BB81B5C28AACF5E00951913 /* AccountSummeryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +374,7 @@
 				3B8C4F8928A378BD00B7853E /* СurrencyFormatter.swift in Sources */,
 				3B8BFDE428A1C23000413F08 /* DummyViewController.swift in Sources */,
 				3B8C4F9C28A391AC00B7853E /* NSNotificationName.swift in Sources */,
+				3BB81B5A28AACC9900951913 /* ProfileManageable.swift in Sources */,
 				3B8EA2C228A0CCB200D6EA33 /* LoginViewController.swift in Sources */,
 				3B8FB78128A4C34E00F231D1 /* ShakeyBellView.swift in Sources */,
 				3B8D05B928A23DF50012979E /* AccountSummaryCell.swift in Sources */,
