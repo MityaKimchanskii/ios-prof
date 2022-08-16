@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B8EDD9128AC0F0C00E4BBB1 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8EDD9028AC0F0C00E4BBB1 /* PasswordTextField.swift */; };
 		3BBAE2DA28AB69E700469DC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAE2D928AB69E700469DC0 /* AppDelegate.swift */; };
 		3BBAE2DE28AB69E700469DC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBAE2DD28AB69E700469DC0 /* ViewController.swift */; };
 		3BBAE2E328AB69E800469DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BBAE2E228AB69E800469DC0 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B8EDD9028AC0F0C00E4BBB1 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		3BBAE2D628AB69E700469DC0 /* Password.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Password.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBAE2D928AB69E700469DC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BBAE2DD28AB69E700469DC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,9 @@
 		3BBAE2D828AB69E700469DC0 /* Password */ = {
 			isa = PBXGroup;
 			children = (
+				3BBAE2D928AB69E700469DC0 /* AppDelegate.swift */,
+				3BBAE2DD28AB69E700469DC0 /* ViewController.swift */,
+				3B8EDD9028AC0F0C00E4BBB1 /* PasswordTextField.swift */,
 				3BBAE2ED28AB6A5F00469DC0 /* Files */,
 			);
 			path = Password;
@@ -60,8 +65,6 @@
 		3BBAE2ED28AB6A5F00469DC0 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				3BBAE2D928AB69E700469DC0 /* AppDelegate.swift */,
-				3BBAE2DD28AB69E700469DC0 /* ViewController.swift */,
 				3BBAE2E428AB69E800469DC0 /* LaunchScreen.storyboard */,
 				3BBAE2E228AB69E800469DC0 /* Assets.xcassets */,
 				3BBAE2E728AB69E800469DC0 /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				3BBAE2DE28AB69E700469DC0 /* ViewController.swift in Sources */,
 				3BBAE2DA28AB69E700469DC0 /* AppDelegate.swift in Sources */,
+				3B8EDD9128AC0F0C00E4BBB1 /* PasswordTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
