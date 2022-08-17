@@ -33,6 +33,8 @@ extension ViewController {
         
         // Password textField
         newPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        newPasswordTextField.delegate = self
+        
         statusView.translatesAutoresizingMaskIntoConstraints = false
         
         // confirmPasswordTextFiefsae
@@ -62,5 +64,15 @@ extension ViewController {
     
     @objc private func resetPasswordButtonTapped() {
         
+    }
+}
+
+// MARK: - PasswordTextFieldDelegate
+extension ViewController: PasswordTextFieldDelegate {
+    
+    func editingChanged(_ sender: PasswordTextField) {
+        if sender === newPasswordTextField {
+            statusView.updateDisplay(sender.textField.text ?? "")
+        }
     }
 }
