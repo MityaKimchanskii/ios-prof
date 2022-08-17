@@ -33,10 +33,12 @@ extension ViewController {
         
         // Password textField
         newPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
-//        criteriaView.translatesAutoresizingMaskIntoConstraints = false
         statusView.translatesAutoresizingMaskIntoConstraints = false
         
+        // confirmPasswordTextFiefsae
         confirmPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        // resetButton
         resetButton.translatesAutoresizingMaskIntoConstraints = false
         resetButton.configuration = .filled()
         resetButton.setTitle("Reset password", for: [])
