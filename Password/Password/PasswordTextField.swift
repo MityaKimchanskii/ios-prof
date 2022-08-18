@@ -10,16 +10,18 @@ import UIKit
 
 protocol PasswordTextFieldDelegate: AnyObject {
     func editingChanged(_ sender: PasswordTextField)
+    func editingDidEnd(_ sender: PasswordTextField)
 }
 
 class PasswordTextField: UIView {
     
+    typealias CustomValidation = (_ textValue: String?) -> (Bool, String)?
+    
     let lockImageView = UIImageView(image: UIImage(systemName: "lock.fill"))
     let textField = UITextField()
-    let placeHolderText: String
     let eyeButton = UIButton(type: .custom)
     let dividerView = UIView()
-    let errorMessageLabel = UILabel()
+    let errorLabel = UILabel()
     
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
@@ -29,6 +31,13 @@ class PasswordTextField: UIView {
 //    }
     
     weak var delegate: PasswordTextFieldDelegate?
+    var customValidation: CustomValidation?
+    let placeHolderText: String
+    
+    var text: String? {
+        get { return textField.text }
+        set { textField.text = newValue }
+    }
     
     init(placeHolderText: String) {
         self.placeHolderText = placeHolderText
@@ -75,13 +84,13 @@ extension PasswordTextField {
         dividerView.backgroundColor = .separator
         
         // errorMessageLabel
-        errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
-        errorMessageLabel.font = .preferredFont(forTextStyle: .footnote)
-        errorMessageLabel.textColor = .systemRed
-        errorMessageLabel.text = "Enter your password"
-        errorMessageLabel.adjustsFontSizeToFitWidth = true
-        errorMessageLabel.minimumScaleFactor = 0.8
-        errorMessageLabel.isHidden = true
+        errorLabel.translatesAutoresizingMaskIntoConstraints = false
+        errorLabel.font = .preferredFont(forTextStyle: .footnote)
+        errorLabel.textColor = .systemRed
+        errorLabel.text = "Enter your password"
+        errorLabel.adjustsFontSizeToFitWidth = true
+        errorLabel.minimumScaleFactor = 0.8
+        errorLabel.isHidden = true
     }
     
     func layout() {
@@ -89,7 +98,7 @@ extension PasswordTextField {
         addSubview(textField)
         addSubview(eyeButton)
         addSubview(dividerView)
-        addSubview(errorMessageLabel)
+        addSubview(errorLabel)
         
         // Lock ImageView
         NSLayoutConstraint.activate([
@@ -120,9 +129,9 @@ extension PasswordTextField {
         
         // errorMessageLabel
         NSLayoutConstraint.activate([
-            errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: dividerView.bottomAnchor, multiplier: 0.5),
-            errorMessageLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            errorMessageLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+            errorLabel.topAnchor.constraint(equalToSystemSpacingBelow: dividerView.bottomAnchor, multiplier: 0.5),
+            errorLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            errorLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         
         // CHCR
@@ -135,7 +144,14 @@ extension PasswordTextField {
 
 // MARK: - UITextFieldDelegate
 extension PasswordTextField: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        delegate?.editingDidEnd(self)
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
 }
 
 // MARK: - Actions
@@ -147,5 +163,29 @@ extension PasswordTextField {
     
     @objc func textFieldEditingChanged(_ sender: UITextField) {
         delegate?.editingChanged(self)
+    }
+}
+
+// MARK: - Validation
+extension PasswordTextField {
+    func validate() -> Bool {
+        if let customValidation = customValidation,
+            let customValidationResult = customValidation(text),
+            customValidationResult.0 == false {
+            showError(customValidationResult.1)
+            return false
+        }
+        clearError()
+        return true
+    }
+    
+    private func showError(_ errorMessage: String) {
+        errorLabel.isHidden = false
+        errorLabel.text = errorMessage
+    }
+
+    private func clearError() {
+        errorLabel.isHidden = true
+        errorLabel.text = ""
     }
 }
